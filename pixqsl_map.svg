@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 140" width="280" height="140">
+  <g fill="#89C949">
+    <!-- Simplified dotted landmasses (Asia / Australia style) -->
+    <!-- helper: small dots via circles in clusters -->
+    <!-- China / SE Asia -->
+    <circle cx="160" cy="45" r="2.2"/><circle cx="168" cy="42" r="2.2"/><circle cx="176" cy="48" r="2.2"/>
+    <circle cx="155" cy="55" r="2.2"/><circle cx="165" cy="58" r="2.2"/><circle cx="175" cy="55" r="2.2"/>
+    <circle cx="185" cy="50" r="2.2"/><circle cx="190" cy="58" r="2.2"/><circle cx="180" cy="65" r="2.2"/>
+    <circle cx="150" cy="65" r="2.2"/><circle cx="160" cy="70" r="2.2"/><circle cx="170" cy="72" r="2.2"/>
+    <!-- Japan -->
+    <circle cx="210" cy="40" r="2.2"/><circle cx="218" cy="38" r="2.2"/><circle cx="215" cy="48" r="2.2"/>
+    <circle cx="222" cy="45" r="2.2"/><circle cx="208" cy="52" r="2.2"/>
+    <!-- Indonesia / Philippines -->
+    <circle cx="185" cy="80" r="2"/><circle cx="195" cy="78" r="2"/><circle cx="190" cy="88" r="2"/>
+    <circle cx="200" cy="85" r="2"/><circle cx="175" cy="90" r="2"/>
+    <!-- Australia -->
+    <circle cx="210" cy="105" r="2.2"/><circle cx="220" cy="102" r="2.2"/><circle cx="230" cy="108" r="2.2"/>
+    <circle cx="205" cy="115" r="2.2"/><circle cx="218" cy="118" r="2.2"/><circle cx="228" cy="115" r="2.2"/>
+    <circle cx="212" cy="125" r="2"/><circle cx="222" cy="122" r="2"/>
+    <!-- India -->
+    <circle cx="130" cy="60" r="2"/><circle cx="125" cy="70" r="2"/><circle cx="135" cy="75" r="2"/>
+    <circle cx="128" cy="82" r="2"/><circle cx="138" cy="65" r="2"/>
+    <!-- Middle edge -->
+    <circle cx="100" cy="50" r="1.8"/><circle cx="110" cy="55" r="1.8"/><circle cx="105" cy="62" r="1.8"/>
+    <!-- Pacific dots -->
+    <circle cx="245" cy="70" r="1.8"/><circle cx="250" cy="90" r="1.6"/><circle cx="255" cy="55" r="1.5"/>
+  </g>
+</svg>

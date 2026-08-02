@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fundo do ícone com bordas arredondadas (padrão Android) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Ondas de rádio sutis no topo -->
+  <path d="M176 135 C220 105, 292 105, 336 135" fill="none" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+  <path d="M200 163 C230 145, 282 145, 312 163" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Livro de Registros / Logbook estilizado -->
+  <path d="M140 195 L256 165 L372 195 L372 365 L256 335 L140 365 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="12" stroke-linejoin="round"/>
+  <line x1="256" y1="165" x2="256" y2="335" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Linhas de texto representadas no log -->
+  <line x1="170" y1="225" x2="226" y2="213" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <line x1="170" y1="260" x2="226" y2="248" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <line x1="170" y1="295" x2="210" y2="285" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Selo de Assinatura Digital / Check (Verificado LoTW) -->
+  <circle cx="314" cy="275" r="52" fill="#0f172a" stroke="#10b981" stroke-width="8" />
+  <path d="M292 275 L308 291 L338 255" fill="none" stroke="#10b981" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

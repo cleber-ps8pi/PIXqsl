@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- PIXqsl Green Theme -->
+    <color name="pix_primary">#FF89C949</color>
+    <color name="pix_primary_bright">#FF9CE33F</color>
+    <color name="pix_primary_dark">#FF6BA035</color>
+    <color name="pix_background">#FF0A0E10</color>
+    <color name="pix_surface">#FF0E1411</color>
+    <color name="pix_on_primary">#FF0A0E10</color>
+    <color name="pix_text">#FFE8F0E0</color>
+
+    <!-- Kept for compatibility -->
+    <color name="md_blue_100">#FFBBDEFB</color>
+    <color name="md_blue_700">#FF1976D2</color>
+    <color name="md_blue_900">#FF0D47A1</color>
+    <color name="md_teal_700">#FF00796B</color>
+</resources>
