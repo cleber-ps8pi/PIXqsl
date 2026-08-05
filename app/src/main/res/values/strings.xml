@@ -236,7 +236,7 @@
 
     <!-- About -->
     <string name="about_app_name" translatable="false">PIXqsl</string>
-    <string name="about_version" translatable="false">Version 1.0.1-MultiGrid</string>
+    <string name="about_version" translatable="false">Version 1.0.2</string>
     <string name="about_description">
        A 100% free, libre and privacy-respecting amateur radio logbook. Built for ADIF management, QSO signing, and LoTW integration — with hardware-backed key protection on Android.
     </string>
@@ -257,4 +257,47 @@
     <string name="dxcc_search_hint">Search DXCC…</string>
     <string name="about_designed_by" translatable="false"><![CDATA[Designed by Cleber (PS8PI)]]></string>
     <string name="about_copyleft" translatable="false"><![CDATA[🄯 2026 Cleber (PS8PI) – Free software – share and enjoy!]]></string>
+    <string name="settings_color_theme">Color theme</string>
+    <string name="theme_green">Green (PIXqsl)</string>
+    <string name="theme_purple">Purple</string>
+    <string name="theme_blue">Blue</string>
+    <string name="theme_amber">Amber</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="appearance_system">System default</string>
+    <string name="appearance_light">Light</string>
+    <string name="appearance_dark">Dark</string>
+    <string name="grids_title">Grids (LoTW)</string>
+    <string name="grids_query">Load from LoTW</string>
+    <string name="grids_query_hint">Tap Load from LoTW to download QSOs and list grid squares.</string>
+    <string name="grids_no_results">No grids found with the current filters.</string>
+    <string name="grids_confirmed_count">Confirmed: %1$d</string>
+    <string name="grids_unconfirmed_count">Unconfirmed: %1$d</string>
+    <string name="grids_total_unique">Unique grids: %1$d</string>
+    <string name="grids_filter_status">Status</string>
+    <string name="grids_filter_all">All</string>
+    <string name="grids_filter_confirmed">Confirmed only</string>
+    <string name="grids_filter_unconfirmed">Unconfirmed only</string>
+    <string name="grids_filter_satellite">Path</string>
+    <string name="grids_filter_sat_all">Satellite + terrestrial</string>
+    <string name="grids_filter_sat_only">Satellite only</string>
+    <string name="grids_filter_terrestrial">Terrestrial only</string>
+    <string name="grids_filter_sat_name">Satellite name</string>
+    <string name="grids_status_confirmed">Confirmed (LoTW QSL)</string>
+    <string name="grids_status_unconfirmed">Not confirmed</string>
+    <string name="grids_qso_count">%1$d QSO(s)</string>
+    <string name="grids_open_from_lotw">Grid list / VUCC</string>
+    <string name="grids_download_stats">LoTW: %1$d confirmed QSOs (%2$d with grid), %3$d unconfirmed (%4$d with grid).</string>
+    <string name="grids_no_grid_hint">Most LoTW QSOs have no GRIDSQUARE. Grids appear only when the other station uploaded a grid (common on VHF/UHF and some FT8). Try clearing band/mode filters.</string>
+    <string name="grids_map_hint">Pinch to zoom · drag to pan · tap a grid</string>
+    <string name="grids_map_selected">Grid %1$s</string>
+    <string name="grids_contacts_title">Contacts in %1$s</string>
+    <string name="grids_no_contacts">No contact details available for this grid.</string>
+    <string name="grids_own_call_optional">Your callsign (optional)</string>
+    <string name="grids_import_new_only">Load only new contacts (use cache)</string>
+    <string name="grids_import_full">Reimport everything from LoTW</string>
+    <string name="grids_from_cache">Showing cached data — tap Load to update</string>
+    <string name="grids_filters">Filters</string>
+    <string name="grids_download_stats_simple">LoTW: %1$d confirmed QSOs (%2$d with grid)</string>
+    <string name="grids_search_label">Search grid / callsign</string>
+    <string name="grids_search_hint">e.g. GG32 or PY5ZZ</string>
 </resources>

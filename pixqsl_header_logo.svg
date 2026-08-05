@@ -1,22 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80">
-  <!-- Antenna / Tower icon -->
-  <g transform="translate(4,6)" fill="none" stroke="#89C949" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 58 L10 68 L26 68 Z" fill="#89C949" stroke="none"/>
-    <line x1="18" y1="58" x2="18" y2="18"/>
-    <line x1="8" y1="28" x2="28" y2="28"/>
-    <line x1="10" y1="38" x2="26" y2="38"/>
-    <line x1="12" y1="48" x2="24" y2="48"/>
-    <circle cx="18" cy="14" r="5" fill="#89C949" stroke="none"/>
-    <path d="M28 18 Q36 10 40 18" stroke="#9CE33F" stroke-width="2.5" opacity="0.9"/>
-    <path d="M30 24 Q40 12 46 24" stroke="#9CE33F" stroke-width="2.2" opacity="0.7"/>
-    <path d="M32 30 Q44 16 50 30" stroke="#9CE33F" stroke-width="2" opacity="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 90" width="480" height="90">
+  <!-- Clean radio tower -->
+  <g transform="translate(8,6)" fill="none" stroke="#7ED943" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- outer signal arc -->
+    <path d="M30 22 C38 14 48 14 56 22" stroke="#8FE04A" stroke-width="2" opacity="0.35"/>
+    <path d="M28 28 C34 22 42 22 48 28" stroke="#8FE04A" stroke-width="2.1" opacity="0.55"/>
+
+    <!-- tower legs (lattice) -->
+    <path d="M18 68 L26 18 L34 68" stroke="#7ED943" stroke-width="2.6"/>
+    <!-- cross braces -->
+    <path d="M20 56 L32 56" stroke="#6BCB3C" stroke-width="2"/>
+    <path d="M21 44 L31 44" stroke="#6BCB3C" stroke-width="2"/>
+    <path d="M22 32 L30 32" stroke="#6BCB3C" stroke-width="2"/>
+    <!-- diagonal braces -->
+    <path d="M20 56 L31 44" stroke="#6BCB3C" stroke-width="1.6" opacity="0.85"/>
+    <path d="M32 56 L21 44" stroke="#6BCB3C" stroke-width="1.6" opacity="0.85"/>
+    <path d="M21 44 L30 32" stroke="#6BCB3C" stroke-width="1.6" opacity="0.85"/>
+    <path d="M31 44 L22 32" stroke="#6BCB3C" stroke-width="1.6" opacity="0.85"/>
+
+    <!-- top element -->
+    <circle cx="26" cy="14" r="4.2" fill="#8FE04A" stroke="none"/>
+    <line x1="26" y1="18" x2="26" y2="22" stroke="#8FE04A" stroke-width="2.2"/>
+
+    <!-- base -->
+    <path d="M14 68 L38 68" stroke="#6BCB3C" stroke-width="3"/>
+    <path d="M16 72 L36 72" stroke="#5AB832" stroke-width="2.5"/>
   </g>
 
-  <!-- "PIX" in white -->
-  <text x="68" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="30" fill="#E8F0E0">PIX</text>
-  <!-- "qsl" in bright green, right after PIX -->
-  <text x="128" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="30" fill="#9CE33F">qsl</text>
-
-  <!-- Subtitle -->
-  <text x="70" y="60" font-family="DejaVu Sans, Arial, sans-serif" font-weight="500" font-size="12" fill="#89C949">by Cleber (PS8PI)</text>
+  <text x="62" y="42" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-weight="800" font-size="34" fill="#8FE04A" letter-spacing="-1">PIXqsl</text>
+  <text x="64" y="64" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-weight="500" font-size="13" fill="#6BCB3C">by Cleber (PS8PI)</text>
 </svg>

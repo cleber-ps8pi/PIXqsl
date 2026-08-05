@@ -61,7 +61,7 @@ import java.time.LocalDate
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LotwScreen(innerPadding: PaddingValues, onNavigateToSettings: () -> Unit) {
+fun LotwScreen(innerPadding: PaddingValues, onNavigateToSettings: () -> Unit, onNavigateToGrids: () -> Unit = {}) {
     val vm: LotwViewModel = viewModel()
 
     LaunchedEffect(Unit) {
@@ -347,6 +347,13 @@ fun LotwScreen(innerPadding: PaddingValues, onNavigateToSettings: () -> Unit) {
             }
 
             Spacer(Modifier.height(8.dp))
+
+            OutlinedButton(
+                onClick = onNavigateToGrids,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(stringResource(R.string.grids_open_from_lotw))
+            }
 
             Button(
                 onClick = { vm.query() },

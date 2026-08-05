@@ -22,6 +22,20 @@ enum class DateFormatOption(
     fun preview(): String = formatDate(LocalDate.of(2026, 12, 30))
 }
 
+
+enum class AppAppearanceMode {
+    SYSTEM,
+    LIGHT,
+    DARK;
+}
+
+enum class AppColorTheme {
+    GREEN,
+    PURPLE,
+    BLUE,
+    AMBER;
+}
+
 enum class AppLanguage(val tag: String) {
     SYSTEM(""),
     ENGLISH("en"),
@@ -54,6 +68,22 @@ class AppPreferences private constructor(context: Context) {
         get() = prefs.getBoolean("use_local_time", false)
         set(value) {
             prefs.edit { putBoolean("use_local_time", value) }
+        }
+
+    var colorTheme: AppColorTheme
+        get() = prefs.getString("color_theme", null)
+            ?.let { name -> AppColorTheme.entries.find { it.name == name } }
+            ?: AppColorTheme.GREEN
+        set(value) {
+            prefs.edit { putString("color_theme", value.name) }
+        }
+
+    var appearanceMode: AppAppearanceMode
+        get() = prefs.getString("appearance_mode", null)
+            ?.let { name -> AppAppearanceMode.entries.find { it.name == name } }
+            ?: AppAppearanceMode.SYSTEM
+        set(value) {
+            prefs.edit { putString("appearance_mode", value.name) }
         }
 
     companion object {

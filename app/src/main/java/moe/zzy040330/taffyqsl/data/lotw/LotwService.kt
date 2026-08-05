@@ -12,8 +12,9 @@ import java.util.concurrent.TimeUnit
 class LotwService {
 
     private val client = OkHttpClient.Builder()
-        .connectTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(60, TimeUnit.SECONDS)
+        .connectTimeout(45, TimeUnit.SECONDS)
+        .readTimeout(180, TimeUnit.SECONDS)
+        .writeTimeout(45, TimeUnit.SECONDS)
         .followRedirects(true)
         .followSslRedirects(true)
         .build()
@@ -72,13 +73,19 @@ class LotwService {
             val response = client.newCall(request).execute()
             val bodyBytes = response.body.bytes()
             val bodyText = String(bodyBytes, Charsets.ISO_8859_1)
-            
+
+            if (response.code == 503 || response.code == 502 || response.code == 429) {
+                throw LotwException.ServerError(response.code)
+            }
+
             // The server returns HTML when an error occurs
             if (!bodyText.contains("<EOH>", ignoreCase = true)) {
                 throw when {
                     bodyText.contains("Username/password incorrect", ignoreCase = true) ||
                         bodyText.contains("Log on to Logbook of The World", ignoreCase = true) ->
                         LotwException.AuthFailed()
+                    response.code !in 200..299 ->
+                        LotwException.ServerError(response.code)
                     else ->
                         LotwException.ServerError(response.code)
                 }

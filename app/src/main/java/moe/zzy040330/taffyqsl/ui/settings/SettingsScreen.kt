@@ -1,6 +1,7 @@
 package moe.zzy040330.taffyqsl.ui.settings
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.LocaleManager
 import android.content.Context
 import android.os.Build
@@ -19,6 +20,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BugReport
 import androidx.compose.material.icons.filled.CalendarToday
 import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.Brightness6
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Info
@@ -54,6 +57,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import moe.zzy040330.taffyqsl.BuildConfig
 import moe.zzy040330.taffyqsl.R
+import moe.zzy040330.taffyqsl.data.AppAppearanceMode
+import moe.zzy040330.taffyqsl.data.AppColorTheme
 import moe.zzy040330.taffyqsl.data.AppLanguage
 import moe.zzy040330.taffyqsl.data.AppPreferences
 import moe.zzy040330.taffyqsl.data.DateFormatOption
@@ -70,6 +75,10 @@ fun SettingsScreen(innerPadding: PaddingValues, navController: NavController) {
     }
     var dateFormat by remember { mutableStateOf(prefs.dateFormat) }
     var dateFormatExpanded by remember { mutableStateOf(false) }
+    var colorTheme by remember { mutableStateOf(prefs.colorTheme) }
+    var colorThemeExpanded by remember { mutableStateOf(false) }
+    var appearanceMode by remember { mutableStateOf(prefs.appearanceMode) }
+    var appearanceModeExpanded by remember { mutableStateOf(false) }
     val supportsPerAppLanguage = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
     var languageExpanded by remember { mutableStateOf(false) }
     var currentLanguage by remember { mutableStateOf(readCurrentAppLanguage(context)) }
@@ -128,7 +137,70 @@ fun SettingsScreen(innerPadding: PaddingValues, navController: NavController) {
             }
         }
 
-        // TODO: dark & light theme
+        item {
+            val appearanceNames = mapOf(
+                AppAppearanceMode.SYSTEM to stringResource(R.string.appearance_system),
+                AppAppearanceMode.LIGHT to stringResource(R.string.appearance_light),
+                AppAppearanceMode.DARK to stringResource(R.string.appearance_dark)
+            )
+            Box {
+                SettingsItem(
+                    icon = Icons.Default.Brightness6,
+                    title = stringResource(R.string.settings_appearance),
+                    subtitle = appearanceNames[appearanceMode] ?: "",
+                    onClick = { appearanceModeExpanded = true }
+                )
+                DropdownMenu(
+                    expanded = appearanceModeExpanded,
+                    onDismissRequest = { appearanceModeExpanded = false }
+                ) {
+                    AppAppearanceMode.entries.forEach { mode ->
+                        DropdownMenuItem(
+                            text = { Text(appearanceNames[mode] ?: mode.name) },
+                            onClick = {
+                                appearanceMode = mode
+                                prefs.appearanceMode = mode
+                                appearanceModeExpanded = false
+                                (context as? Activity)?.recreate()
+                            }
+                        )
+                    }
+                }
+            }
+        }
+
+        item {
+            val themeNames = mapOf(
+                AppColorTheme.GREEN to stringResource(R.string.theme_green),
+                AppColorTheme.PURPLE to stringResource(R.string.theme_purple),
+                AppColorTheme.BLUE to stringResource(R.string.theme_blue),
+                AppColorTheme.AMBER to stringResource(R.string.theme_amber)
+            )
+            Box {
+                SettingsItem(
+                    icon = Icons.Default.Palette,
+                    title = stringResource(R.string.settings_color_theme),
+                    subtitle = themeNames[colorTheme] ?: "",
+                    onClick = { colorThemeExpanded = true }
+                )
+                DropdownMenu(
+                    expanded = colorThemeExpanded,
+                    onDismissRequest = { colorThemeExpanded = false }
+                ) {
+                    AppColorTheme.entries.forEach { theme ->
+                        DropdownMenuItem(
+                            text = { Text(themeNames[theme] ?: theme.name) },
+                            onClick = {
+                                colorTheme = theme
+                                prefs.colorTheme = theme
+                                colorThemeExpanded = false
+                                (context as? Activity)?.recreate()
+                            }
+                        )
+                    }
+                }
+            }
+        }
 
         item {
             val languageNames = mapOf(
